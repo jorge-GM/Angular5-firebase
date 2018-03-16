@@ -1,0 +1,65 @@
+<div class="card mt-5">
+  <div class="card-body">
+      <h6 class="text-center">Agrear nueva persona</h6>
+    <form #personaForm="ngForm" (ngSubmit)="onSubmit(personaForm)">
+      <div class="form-group">
+        <input 
+          type="text"
+          class="form-control"
+          name="nombre"
+          #nombre="ngModel"
+          [(ngModel)]="personaService.selectPersona.nombre"
+          placeholder="Ingrese su nombre"
+          >
+      </div>
+      <div class="form-group">
+        <input 
+          type="text"
+          class="form-control"
+          name="email"
+          #email="ngModel"
+          [(ngModel)]="personaService.selectPersona.email"
+          placeholder="Ingrese su email"
+          >
+      </div>
+      <div class="form-group">
+        <input 
+          type="text"
+          class="form-control"
+          name="edad"
+          #edad="ngModel"
+          [(ngModel)]="personaService.selectPersona.edad"
+          placeholder="Ingrese su edad"
+          >
+      </div>
+      <div class="form-group">
+        <input 
+          type="password"
+          class="form-control"
+          name="password"
+          #password="ngModel"
+          [(ngModel)]="personaService.selectPersona.password"
+          placeholder="Ingrese su password"
+          >
+      </div>
+      <div class="form-group">
+        <input 
+          type="text"
+          class="form-control"
+          name="direccion"
+          #direccion="ngModel"
+          [(ngModel)]="personaService.selectPersona.direccion"
+          placeholder="Ingrese su direccion"
+          >
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-plus-circle"></i> Agregar nueva persona
+        </button>
+        <button class="btn btn-secondary" type="reset" (click)="resetForm(personaForm)">
+          <i class="fas fa-sync-alt"></i> Limpiar campos
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

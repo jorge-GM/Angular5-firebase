@@ -1,0 +1,15 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <h6 class="text-center">Listado de persona</h6>
+    <table class="table table-sm-table-hover table-responsive-sm">
+      <tbody>
+        <tr *ngFor="let persona of personaList">
+          <td>{{persona.nombre}}</td>
+          <td>{{persona.email}}</td>
+          <td>{{persona.edad}}</td>
+          <td>{{persona.direccion}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
